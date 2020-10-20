@@ -9,7 +9,8 @@ public class BasicController {
 
     @GetMapping("/{text}")
     public String rev(@PathVariable String text) {
-        return "";
+        String processedValue = new StringBuilder(text).reverse().toString();
+        return processedValue;
     }
 
 }
